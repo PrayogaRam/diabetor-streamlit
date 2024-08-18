@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 
-model = pickle.load(open('diabetes_model.sav'))
+model = pickle.load(open('diabetes_model.sav', 'rb'))
 
 st.title('Diabetor: Diabetes Detector')
 
