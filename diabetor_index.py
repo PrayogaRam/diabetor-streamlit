@@ -3,9 +3,7 @@ import pickle
 import numpy as np
 
 # Memuat model machine learning
-model_path = '/mnt/data/diabetes_model(0.1,1).sav'
-with open(model_path, 'rb') as file:
-    model = pickle.load(file)
+model = pickle.load(open('diabetes_model(0.1,1).sav', 'rb'))
 
 def main():
     # Membuat judul dan deskripsi aplikasi
