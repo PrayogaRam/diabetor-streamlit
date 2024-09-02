@@ -42,7 +42,6 @@ def main():
     GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5])
     MentHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", 0, 30, 0)
     PhysHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", 0, 30, 0)
-    Age = st.sidebar.slider("Kategori Umur", 1, 13, 5)
     Age = st.sidebar.slider("Level Kategori Umur [1-13] Berdasarkan AGEG5YR: FOURTEEN-LEVEL AGE CATEGORY", 1, 13, 5)
 
     # Mengambil data input
