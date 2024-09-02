@@ -2,8 +2,9 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# Memuat model machine learning
-model = pickle.load(open('diabetes_model(1,1).sav', 'rb'))
+model_path = 'diabetes_model(1,1).sav'
+with open(model_path, 'rb') as file:
+    model = pickle.load(file)
 
 def main():
     # Membuat judul dan deskripsi aplikasi
