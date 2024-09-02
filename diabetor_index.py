@@ -36,7 +36,7 @@ def main():
     AnyHealthcare = 1.0 if AnyHealthcare == 'Ya' else 0.0
     NoDocbcCost = 1.0 if NoDocbcCost == 'Ya' else 0.0
     DiffWalk = 1.0 if DiffWalk == 'Ya' else 0.0
-    Sex = 1.0 if Sex = 'Laki-Laki' else 0.0
+    Sex = 1.0 if Sex == 'Laki-Laki' else 0.0
 
     # Input BMI menggunakan slider dengan nilai desimal
     BMI = st.sidebar.slider("Indeks Massa Tubuh (BMI)", min_value=0.0, max_value=80.0, value=25.0, step=0.1, format="%f")
