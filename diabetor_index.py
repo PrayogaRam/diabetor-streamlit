@@ -27,22 +27,23 @@ def main():
     Sex = st.sidebar.radio("Jenis Kelamin (0=Perempuan, 1=Laki-laki)", [0, 1])
 
     # Konversi pilihan "Ya" atau "Tidak" menjadi 1 atau 0
-    HighBP = 1.0 if HighBP == 'Ya' else 0.0
-    HighChol = 1.0 if HighChol == 'Ya' else 0.0
-    CholCheck = 1.0 if CholCheck == 'Ya' else 0.0
-    Smoker = 1.0 if Smoker == 'Ya' else 0.0
-    Stroke = 1.0 if Stroke == 'Ya' else 0.0
-    HeartDiseaseorAttack = 1.0 if HeartDiseaseorAttack == 'Ya' else 0.0
-    AnyHealthcare = 1.0 if AnyHealthcare == 'Ya' else 0.0
-    NoDocbcCost = 1.0 if NoDocbcCost == 'Ya' else 0.0
-    DiffWalk = 1.0 if DiffWalk == 'Ya' else 0.0
+    HighBP = 1 if HighBP == 'Ya' else 0
+    HighChol = 1 if HighChol == 'Ya' else 0
+    CholCheck = 1 if CholCheck == 'Ya' else 0
+    Smoker = 1 if Smoker == 'Ya' else 0
+    Stroke = 1 if Stroke == 'Ya' else 0
+    HeartDiseaseorAttack = 1 if HeartDiseaseorAttack == 'Ya' else 0
+    AnyHealthcare = 1 if AnyHealthcare == 'Ya' else 0
+    NoDocbcCost = 1 if NoDocbcCost == 'Ya' else 0
+    DiffWalk = 1 if DiffWalk == 'Ya' else 0
 
     # Input data tambahan
-    BMI = float(st.sidebar.slider("Indeks Massa Tubuh (BMI)", 0, 80, 25))
-    GenHlth = float(st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5]))
-    MentHlth = float(st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", 0, 30, 0))
-    PhysHlth = float(st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", 0, 30, 0))
-    Age = float(st.sidebar.slider("Level Kategori Umur [1-13] Berdasarkan AGEG5YR: FOURTEEN-LEVEL AGE CATEGORY", 1, 13, 5))
+    BMI = st.sidebar.slider("Indeks Massa Tubuh (BMI)", 0, 80, 25)
+    GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5])
+    MentHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", 0, 30, 0)
+    PhysHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", 0, 30, 0)
+    Age = st.sidebar.slider("Kategori Umur", 1, 13, 5)
+    Age = st.sidebar.slider("Level Kategori Umur [1-13] Berdasarkan AGEG5YR: FOURTEEN-LEVEL AGE CATEGORY", 1, 13, 5)
 
     # Mengambil data input
     input_data = np.array([[HighBP, HighChol, CholCheck, BMI, Smoker, Stroke, HeartDiseaseorAttack, 
