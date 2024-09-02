@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 
-model_path = 'diabetes_model(1,10).sav'
+model_path = 'diabetes_model(1,10)90.sav'
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
