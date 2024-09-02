@@ -7,8 +7,8 @@ model = pickle.load(open('diabetes_model(0.1,1).sav', 'rb'))
 
 def main():
     # Membuat judul dan deskripsi aplikasi
-    st.title("🩺 Deteksi Diabetes dengan AI")
-    st.write("Selamat datang di aplikasi deteksi diabetes! Masukkan data kesehatan Anda untuk mengetahui kemungkinan terkena diabetes.")
+    st.title("🩺 DIABETOR-Diabetes Detector")
+    st.write("Selamat datang di aplikasi DIABETOR! Masukkan data kesehatan Anda untuk mengetahui kemungkinan terkena diabetes.")
 
     # Membuat sidebar untuk input data
     st.sidebar.header("Input Data Pasien")
@@ -41,7 +41,7 @@ def main():
     GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5])
     MentHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", 0, 30, 0)
     PhysHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", 0, 30, 0)
-    Age = st.sidebar.slider("Kategori Umur", 1, 13, 5)
+    Age = st.sidebar.slider("Kategori Umur", 1, 100, 5)
 
     # Mengambil data input
     input_data = np.array([[HighBP, HighChol, CholCheck, BMI, Smoker, Stroke, HeartDiseaseorAttack, 
