@@ -38,7 +38,7 @@ def main():
     DiffWalk = 1 if DiffWalk == 'Ya' else 0
 
     # Input data tambahan
-    BMI = float(st.sidebar.text_input("Indeks Massa Tubuh (BMI)", "25"))
+    BMI = st.sidebar.slider("Indeks Massa Tubuh (BMI)", min_value=0.0, max_value=80.0, value=25.0, step=0.1, format="%f")
     GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5])
     MentHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", 0, 30, 0)
     PhysHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", 0, 30, 0)
