@@ -54,7 +54,7 @@ def main():
             st.error("⚠️ Anda mungkin memiliki diabetes tipe 2. Harap segera konsultasikan dengan dokter.")
         elif prediction == 1:
             st.warning("⚠️ Anda mungkin berada dalam tahap pre-diabetes. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
-        else:
+        elif prediction == 0:
             st.success("✅ Anda kemungkinan besar tidak memiliki diabetes. Tetap jaga kesehatan Anda!")
 
         st.balloons()  # Menampilkan animasi balon untuk hasil non-diabetes
