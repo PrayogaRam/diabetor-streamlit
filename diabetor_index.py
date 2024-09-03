@@ -68,8 +68,7 @@ def main():
             st.warning("⚠️ Anda mungkin memiliki diabetes tipe 2. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
         else:
             st.success("✅ Anda kemungkinan besar tidak memiliki diabetes. Tetap jaga kesehatan Anda!")
-
-        st.balloons()  # Menampilkan animasi balon untuk hasil non-diabetes
+            st.balloons()
 
 if __name__ == "__main__":
     main()
