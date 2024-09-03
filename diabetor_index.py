@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 
-model_path = 'diabetes_model(1,1)newX.sav'
+model_path = 'diabetes_model5050L.sav'
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
@@ -61,9 +61,7 @@ def main():
     # Menampilkan prediksi setelah tombol diklik
     if st.button("Deteksi Diabetes"):
         prediction = model.predict(input_data)
-        if prediction == 2:
-            st.error("⚠️ Anda mungkin memiliki diabetes tipe 2. Harap segera konsultasikan dengan dokter.")
-        elif prediction == 1:
+        if prediction == 1:
             st.warning("⚠️ Anda mungkin berada dalam tahap pre-diabetes. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
         else:
             st.success("✅ Anda kemungkinan besar tidak memiliki diabetes. Tetap jaga kesehatan Anda!")
