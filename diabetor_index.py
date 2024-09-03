@@ -20,6 +20,9 @@ def main():
     CholCheck = st.sidebar.radio("Pernah Pemeriksaan Kolesterol", ['Ya', 'Tidak'])
     Smoker = st.sidebar.radio("Perokok", ['Ya', 'Tidak'])
     Stroke = st.sidebar.radio("Pernah Stroke", ['Ya', 'Tidak'])
+    Fruits = st.sidebar.radio("Konsumsi Buah Setiap Hari", ['Ya', 'Tidak'])
+    PhysActivity = st.sidebar.radio("Kegiatan Fisik 30 Hari Terakhir", ['Ya', 'Tidak'])
+    Veggies = st.sidebar.radio("Konsumsi Sayuran Setiap Hari", ['Ya', 'Tidak'])
     HeartDiseaseorAttack = st.sidebar.radio("Penyakit Jantung atau Serangan Jantung", ['Ya', 'Tidak'])
     AnyHealthcare = st.sidebar.radio("Pernah Mendapat Perawatan Kesehatan", ['Ya', 'Tidak'])
     NoDocbcCost = st.sidebar.radio("Tidak Ada Dokter karena Biaya", ['Ya', 'Tidak'])
@@ -37,6 +40,9 @@ def main():
     NoDocbcCost = 1.0 if NoDocbcCost == 'Ya' else 0.0
     DiffWalk = 1.0 if DiffWalk == 'Ya' else 0.0
     Sex = 1.0 if Sex == 'Laki-Laki' else 0.0
+    Fruits = 1.0 if Fruits == 'Ya' else 0.0
+    PhysActivity = 1.0 if PhysActivity == 'Ya' else 0.0
+    Veggies = 1.0 if Veggies == 'Ya' else 0.0
 
     # Input BMI menggunakan slider dengan nilai desimal
     BMI = st.sidebar.slider("Indeks Massa Tubuh (BMI)", min_value=0.0, max_value=80.0, value=25.0, step=0.1, format="%f")
