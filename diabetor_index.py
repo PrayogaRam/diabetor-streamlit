@@ -23,7 +23,7 @@ def main():
     Fruits = st.sidebar.radio("Konsumsi Buah Setiap Hari", ['Ya', 'Tidak'])
     PhysActivity = st.sidebar.radio("Kegiatan Fisik 30 Hari Terakhir", ['Ya', 'Tidak'])
     Veggies = st.sidebar.radio("Konsumsi Sayuran Setiap Hari", ['Ya', 'Tidak'])
-    HvyAlcoholConsump = st.sidebar.radio("Peminum berat (pria dewasa minum lebih dari 14 minuman per minggu dan wanita dewasa minum lebih dari 7 minuman per minggu)", ['Ya', 'Tidak'])
+    HvyAlcoholConsump = st.sidebar.radio("Pemabuk berat (pria dewasa minum lebih dari 14 minuman per minggu dan wanita dewasa minum lebih dari 7 minuman per minggu)", ['Ya', 'Tidak'])
     HeartDiseaseorAttack = st.sidebar.radio("Penyakit Jantung atau Serangan Jantung", ['Ya', 'Tidak'])
     AnyHealthcare = st.sidebar.radio("Pernah Mendapat Perawatan Kesehatan", ['Ya', 'Tidak'])
     NoDocbcCost = st.sidebar.radio("Tidak Ada Dokter karena Biaya", ['Ya', 'Tidak'])
