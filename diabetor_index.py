@@ -47,16 +47,17 @@ def main():
     HvyAlcoholConsump = 1.0 if Veggies == 'Ya' else 0.0 
 
     # Input BMI menggunakan slider dengan nilai desimal
-    BMI = st.sidebar.slider("Indeks Massa Tubuh (BMI)", min_value=0.0, max_value=80.0, value=25.0, step=0.1, format="%f")
-    
-    GenHlth = float(st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5]))
-    MentHlth = float(st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", 0, 30, 0))
-    PhysHlth = float(st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", 0, 30, 0))
-    Age = float(st.sidebar.slider("Kategori Umur Berdasarkan AGEG5YR: FOURTEEN-LEVEL AGE CATEGORY", 1, 13, 5))
+    BMI = st.sidebar.slider("Indeks Massa Tubuh (BMI)", 0, 80, 0)
+    GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5]))
+    MentHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", 0, 30, 0))
+    PhysHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", 0, 30, 0))
+    Age = st.sidebar.slider("Kategori Umur Berdasarkan AGEG5YR: FOURTEEN-LEVEL AGE CATEGORY", 1, 13, 5))
+    Education = st.sidebar.slider("Level Edukasi Berdasarkan (EDUCA EDUCATION LEVEL) Skala 1-6", 1, 6, 1))
+    Income = st.sidebar.slider("Skala Pendapatan Berdasarkan (INCOME2 INCOME LEVEL) Skala 1-8", 1, 8, 1))
 
     # Mengambil data input
     input_data = np.array([[HighBP, HighChol, CholCheck, BMI, Smoker, Stroke, Fruits, Veggies, PhysActivity, HvyAlcoholConsump, HeartDiseaseorAttack, 
-                            AnyHealthcare, NoDocbcCost, GenHlth, MentHlth, PhysHlth, DiffWalk, Sex, Age]])
+                            AnyHealthcare, NoDocbcCost, GenHlth, MentHlth, PhysHlth, DiffWalk, Sex, Age, Education, Income]])
 
     # Menampilkan prediksi setelah tombol diklik
     if st.button("Deteksi Diabetes"):
