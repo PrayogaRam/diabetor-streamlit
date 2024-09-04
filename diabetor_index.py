@@ -48,7 +48,7 @@ def main():
 
     # Input BMI menggunakan slider dengan nilai desimal
     BMI = st.sidebar.slider("Indeks Massa Tubuh (BMI)", 0, 80, 0)
-    GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5]))
+    GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5])
     MentHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", 0, 30, 0))
     PhysHlth = st.sidebar.slider("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", 0, 30, 0))
     Age = st.sidebar.slider("Kategori Umur Berdasarkan AGEG5YR: FOURTEEN-LEVEL AGE CATEGORY", 1, 13, 5))
