@@ -36,7 +36,7 @@ def main():
     CholCheck = 1 if CholCheck == 'Ya' else 0
     Smoker = 1 if Smoker == 'Ya' else 0
     Stroke = 1 if Stroke == 'Ya' else 0
-    HeartDiseaseorAttack = 1 if HeartDiseaseorAttack == 'Ya' else 0
+    HeartDiseaseorAttack = 0 if HeartDiseaseorAttack == 'Ya' else 1
     AnyHealthcare = 1 if AnyHealthcare == 'Ya' else 0
     NoDocbcCost = 1 if NoDocbcCost == 'Ya' else 0
     DiffWalk = 1 if DiffWalk == 'Ya' else 0
