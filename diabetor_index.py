@@ -61,7 +61,7 @@ def main():
 
     # Menampilkan prediksi setelah tombol diklik
     if st.button("Deteksi Diabetes"):
-        prediction = model.predict(input_data)
+        prediction = float(model.predict(input_data))
         if prediction <= 1:
             st.warning("⚠️ Anda mungkin sedang dalam tahap pre-diabetes. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
         elif prediction <= 2:
