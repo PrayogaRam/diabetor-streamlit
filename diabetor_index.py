@@ -64,7 +64,7 @@ def main():
         prediction = float(model.predict(input_data))
         if prediction < 2 or prediction >= 1:
             st.warning("⚠️ Anda mungkin sedang dalam tahap pre-diabetes. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
-        elif prediction prediction >= 2:
+        elif prediction >= 2:
             st.warning("⚠️ Anda mungkin memiliki diabetes tipe 2. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
         elif prediction < 1 or prediction >= 0:
             st.success("✅ Anda kemungkinan besar tidak memiliki diabetes. Tetap jaga kesehatan Anda!")
