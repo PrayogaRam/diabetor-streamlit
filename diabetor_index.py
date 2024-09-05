@@ -41,9 +41,9 @@ def main():
     NoDocbcCost = 1 if NoDocbcCost == 'Ya' else 0
     DiffWalk = 1 if DiffWalk == 'Ya' else 0
     Sex = 1 if Sex == 'Laki-Laki' else 0
-    Fruits = 1 if Fruits == 'Ya' else 0
-    PhysActivity = 1 if PhysActivity == 'Ya' else 0
-    Veggies = 1 if Veggies == 'Ya' else 0 
+    Fruits = 0 if Fruits == 'Ya' else 1
+    PhysActivity = 0 if PhysActivity == 'Ya' else 1
+    Veggies = 0 if Veggies == 'Ya' else 1
     HvyAlcoholConsump = 1 if HvyAlcoholConsump == 'Ya' else 0 
 
     # Input BMI menggunakan input angka
@@ -61,8 +61,8 @@ def main():
 
     # Menampilkan prediksi setelah tombol diklik
     if st.button("Deteksi Diabetes"):
-        prediction = float(model.predict(input_data))
-        if prediction >= 1:
+        prediction = model.predict(input_data))
+        if prediction == 1:
             st.warning("⚠️ Anda mungkin sedang dalam tahap pre-diabetes. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
         elif prediction == 2:
             st.warning("⚠️ Anda mungkin memiliki diabetes tipe 2. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
