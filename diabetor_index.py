@@ -62,11 +62,11 @@ def main():
     # Menampilkan prediksi setelah tombol diklik
     if st.button("Deteksi Diabetes"):
         prediction = model.predict(input_data)
-        if prediction == 1:
+        if prediction => 1:
             st.warning("⚠️ Anda mungkin sedang dalam tahap pre-diabetes. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
-        elif prediction == 2:
+        elif prediction => 2:
             st.warning("⚠️ Anda mungkin memiliki diabetes tipe 2. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
-        else:
+        elif prediction => 0:
             st.success("✅ Anda kemungkinan besar tidak memiliki diabetes. Tetap jaga kesehatan Anda!")
             st.balloons()
 
