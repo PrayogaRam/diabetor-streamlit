@@ -44,16 +44,16 @@ def main():
     Fruits = 0 if Fruits == 'Ya' else 1
     PhysActivity = 0 if PhysActivity == 'Ya' else 1
     Veggies = 0 if Veggies == 'Ya' else 1
-    HvyAlcoholConsump = 1 if HvyAlcoholConsump == 'Ya' else 0 
+    HvyAlcoholConsump = 0 if HvyAlcoholConsump == 'Ya' else 1 
 
     # Input BMI menggunakan input angka
-    BMI = st.sidebar.number_input("Indeks Massa Tubuh (BMI)", min_value=0, max_value=80)
+    BMI = st.sidebar.number_input("Indeks Massa Tubuh (BMI)", min_value=0, max_value=80, value=0)
     GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5])
-    MentHlth = st.sidebar.number_input("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", min_value=0, max_value=30)
-    PhysHlth = st.sidebar.number_input("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", min_value=0, max_value=30)
-    Age = st.sidebar.number_input("Kategori Umur Berdasarkan AGEG5YR: FOURTEEN-LEVEL AGE CATEGORY", min_value=1, max_value=13)
-    Education = st.sidebar.number_input("Level Edukasi Berdasarkan (EDUCA EDUCATION LEVEL) Skala 1-6", min_value=1, max_value=6)
-    Income = st.sidebar.number_input("Skala Pendapatan Berdasarkan (INCOME2 INCOME LEVEL) Skala 1-8", min_value=1, max_value=8)
+    MentHlth = st.sidebar.number_input("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", min_value=0, max_value=30, value=0)
+    PhysHlth = st.sidebar.number_input("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", min_value=0, max_value=30, value=0)
+    Age = st.sidebar.number_input("Kategori Umur Berdasarkan AGEG5YR: FOURTEEN-LEVEL AGE CATEGORY", min_value=1, max_value=13, value=0)
+    Education = st.sidebar.number_input("Level Edukasi Berdasarkan (EDUCA EDUCATION LEVEL) Skala 1-6", min_value=1, max_value=6, value=0)
+    Income = st.sidebar.number_input("Skala Pendapatan Berdasarkan (INCOME2 INCOME LEVEL) Skala 1-8", min_value=1, max_value=8, value=0)
 
     # Mengambil data input
     input_data = np.array([[HighBP, HighChol, CholCheck, BMI, Smoker, Stroke, Fruits, Veggies, PhysActivity, HvyAlcoholConsump, HeartDiseaseorAttack, 
