@@ -47,7 +47,7 @@ def main():
     HvyAlcoholConsump = 1.0 if HvyAlcoholConsump == 'Ya' else 0.0 
 
     # Input BMI menggunakan input angka
-    BMI = st.sidebar.number_input("Indeks Massa Tubuh (BMI)", min_value=0.0, max_value=80.0, value=0.0)
+    BMI = st.sidebar.number_input("Indeks Massa Tubuh (BMI)", min_value=0, max_value=80)
     GenHlth = st.sidebar.selectbox("Kesehatan Umum (1=Sangat Baik, 5=Sangat Buruk)", [1, 2, 3, 4, 5])
     MentHlth = st.sidebar.number_input("Jumlah Hari dengan Masalah Kesehatan Mental (30 hari terakhir)", min_value=0, max_value=30, value=0)
     PhysHlth = st.sidebar.number_input("Jumlah Hari dengan Masalah Kesehatan Fisik (30 hari terakhir)", min_value=0, max_value=30, value=0)
