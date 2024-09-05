@@ -31,20 +31,20 @@ def main():
     Sex = st.sidebar.radio("Jenis Kelamin", ['Perempuan', 'Laki-Laki'])
 
     # Konversi pilihan "Ya" atau "Tidak" menjadi 1 atau 0
-    HighBP = 1.0 if HighBP == 'Ya' else 0.0
-    HighChol = 1.0 if HighChol == 'Ya' else 0.0
-    CholCheck = 1.0 if CholCheck == 'Ya' else 0.0
-    Smoker = 1.0 if Smoker == 'Ya' else 0.0
-    Stroke = 1.0 if Stroke == 'Ya' else 0.0
-    HeartDiseaseorAttack = 1.0 if HeartDiseaseorAttack == 'Ya' else 0.0
-    AnyHealthcare = 1.0 if AnyHealthcare == 'Ya' else 0.0
-    NoDocbcCost = 1.0 if NoDocbcCost == 'Ya' else 0.0
-    DiffWalk = 1.0 if DiffWalk == 'Ya' else 0.0
-    Sex = 1.0 if Sex == 'Laki-Laki' else 0.0
-    Fruits = 1.0 if Fruits == 'Ya' else 0.0
-    PhysActivity = 1.0 if PhysActivity == 'Ya' else 0.0
-    Veggies = 1.0 if Veggies == 'Ya' else 0.0 
-    HvyAlcoholConsump = 1.0 if HvyAlcoholConsump == 'Ya' else 0.0 
+    HighBP = 1 if HighBP == 'Ya' else 0
+    HighChol = 1 if HighChol == 'Ya' else 0
+    CholCheck = 1 if CholCheck == 'Ya' else 0
+    Smoker = 1 if Smoker == 'Ya' else 0
+    Stroke = 1 if Stroke == 'Ya' else 0
+    HeartDiseaseorAttack = 1 if HeartDiseaseorAttack == 'Ya' else 0
+    AnyHealthcare = 1 if AnyHealthcare == 'Ya' else 0
+    NoDocbcCost = 1 if NoDocbcCost == 'Ya' else 0
+    DiffWalk = 1 if DiffWalk == 'Ya' else 0
+    Sex = 1 if Sex == 'Laki-Laki' else 0
+    Fruits = 1 if Fruits == 'Ya' else 0
+    PhysActivity = 1 if PhysActivity == 'Ya' else 0
+    Veggies = 1 if Veggies == 'Ya' else 0 
+    HvyAlcoholConsump = 1 if HvyAlcoholConsump == 'Ya' else 0 
 
     # Input BMI menggunakan input angka
     BMI = st.sidebar.number_input("Indeks Massa Tubuh (BMI)", min_value=0, max_value=80)
@@ -66,7 +66,7 @@ def main():
             st.warning("⚠️ Anda mungkin sedang dalam tahap pre-diabetes. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
         elif prediction >= 2:
             st.warning("⚠️ Anda mungkin memiliki diabetes tipe 2. Harap perhatikan gaya hidup dan konsultasikan dengan dokter.")
-        elif prediction == 0:
+        elif prediction >= 0:
             st.success("✅ Anda kemungkinan besar tidak memiliki diabetes. Tetap jaga kesehatan Anda!")
             st.balloons()
 
